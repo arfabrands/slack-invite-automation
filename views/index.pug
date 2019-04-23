@@ -10,9 +10,8 @@ html
     #wrapper
       .main
         .header
-          h1
-            strong #{community}
-          h2 #{__('HEADER', community)}
+          img(src="images/arfa_logo_color_2019_04.jpg")
+          h2 Join the conversation on Slack
         .content
           .information
             form(method="POST", action="invite")#join-form.form
@@ -20,6 +19,7 @@ html
               if tokenRequired
                 input(type="text", name="token", placeholder=__('ENTER_TOKEN'))#slack-token.field
               input(type="submit", value="Join").submit
+              img(src="https://slack.arfa.co/badge.svg?colorA=155799&colorB=FAFAFA")
               if !!recaptchaSiteKey
                 div(class="g-recaptcha", data-sitekey=recaptchaSiteKey)
     if !!recaptchaSiteKey
